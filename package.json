@@ -1,0 +1,19 @@
+{
+  "name": "ps-metronome",
+  "version": "0.0.1",
+  "description": "Event scheduler for audio and graphics",
+  "main": "dist/psmetronome.js",
+  "scripts": {
+    "build": "webpack -r esm --mode=development --content-base src",
+    "lint": "eslint src"
+  },
+  "author": "Luke Anderson",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.0.0",
+    "esm": "^3.2.25",
+    "raw-loader": "^2.0.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  }
+}
