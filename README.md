@@ -1,5 +1,5 @@
 # Metronome
-A precise lookahead event scheduler, based off Chris Wilson's [article](https://www.html5rocks.com/en/tutorials/audio/scheduling/).
+A precise lookahead event scheduler, based off Chris Wilson's [article](https://www.html5rocks.com/en/tutorials/audio/scheduling/). Time unit is in [milliseconds](https://developer.mozilla.org/en-US/docs/Web/API/Performance/now)
 
 ## Build scripts
 install dependencies: `npm install`  
