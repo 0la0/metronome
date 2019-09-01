@@ -58,8 +58,8 @@ metronome.isRunning(); // returns a boolean
 
 metronome.getTickLength(); // returns the duration of a tick (32nd note)
 
-metronome.setTempo(tempo); // set the tempo
-metronome.setTempo(); // returns the tempo
+metronome.setTempo(tempo); // set the tempo (BPM), default is 120 BPM
+metronome.setTempo(); // returns the tempo (BPM)
 ```
 
 ### Metronome Events
