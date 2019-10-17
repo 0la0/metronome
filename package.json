@@ -1,12 +1,12 @@
 {
   "name": "metronome",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A precise lookahead event scheduler",
   "main": "dist/metronome.js",
   "scripts": {
     "build": "webpack --content-base src",
     "lint": "eslint src",
-    "postinstall": "npm run build"
+    "prepare": "npm run build"
   },
   "author": "Luke Anderson",
   "repository": "github:0la0/metronome",
