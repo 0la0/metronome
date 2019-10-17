@@ -1,8 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
-const packageJson = require('./package.json');
-
-const { version } = packageJson;
 
 const webpackConfig = {
   context: path.resolve(__dirname),
@@ -12,9 +8,9 @@ const webpackConfig = {
   output: {
     publicPath: 'dist/',
     path: path.resolve(__dirname, 'dist'),
-    filename: 'psmetronome.js',
-    sourceMapFilename: 'psmetronome.js.map',
-    library: 'ps-metronome',
+    filename: 'metronome.js',
+    sourceMapFilename: 'metronome.js.map',
+    library: 'metronome',
     libraryTarget: 'umd',
     globalObject: 'this'
   },
@@ -28,12 +24,7 @@ const webpackConfig = {
       }
     ]
   },
-  mode: process.env.WEBPACK_SERVE ? 'development' : 'production',
-  plugins: [
-    new webpack.DefinePlugin({
-      VERSION: JSON.stringify(version),
-    }),
-  ]
+  mode: 'production',
 };
 
 module.exports = webpackConfig;

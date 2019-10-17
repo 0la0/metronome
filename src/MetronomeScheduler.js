@@ -6,7 +6,7 @@ function validOrDefault(fn) {
 }
 
 export default class MetronomeScheduler {
-  constructor({ processTick, render, start, stop, }) {
+  constructor({ processTick, start, stop, }) {
     this.processTick = validOrDefault(processTick);
     this.start = validOrDefault(start);
     this.stop = validOrDefault(stop);

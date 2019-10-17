@@ -13,7 +13,7 @@ build: `npm run build`
 import {
   MetronomeManager,
   MetronomeScheduler,
-} from 'ps-metronome';
+} from 'metronome';
 
 const metronome = new MetronomeManager();
 

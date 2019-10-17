@@ -1,17 +1,17 @@
 {
-  "name": "ps-metronome",
-  "version": "0.0.1",
-  "description": "Event scheduler for audio and graphics",
-  "main": "dist/psmetronome.js",
+  "name": "metronome",
+  "version": "1.0.0",
+  "description": "A precise lookahead event scheduler",
+  "main": "dist/metronome.js",
   "scripts": {
-    "build": "webpack -r esm --mode=development --content-base src",
+    "build": "webpack --content-base src",
     "lint": "eslint src"
   },
   "author": "Luke Anderson",
-  "license": "ISC",
+  "repository": "github:0la0/metronome",
+  "license": "GPL-3.0",
   "devDependencies": {
     "eslint": "^6.0.0",
-    "esm": "^3.2.25",
     "raw-loader": "^2.0.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7"
