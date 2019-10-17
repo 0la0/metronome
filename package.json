@@ -5,7 +5,8 @@
   "main": "dist/metronome.js",
   "scripts": {
     "build": "webpack --content-base src",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "postinstall": "npm run build"
   },
   "author": "Luke Anderson",
   "repository": "github:0la0/metronome",
