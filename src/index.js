@@ -1,7 +1,6 @@
 import Metronome from './Metronome';
 import MetronomeScheduler from './MetronomeScheduler';
 import Scheduler from './Scheduler';
-import TimeSchedule from './TimeSchedule';
 
 class MetronomeManager {
   constructor() {
@@ -45,6 +44,5 @@ class MetronomeManager {
 
 export {
   MetronomeManager,
-  MetronomeScheduler,
-  TimeSchedule
+  MetronomeScheduler
 };

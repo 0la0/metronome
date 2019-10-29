@@ -1,4 +1,3 @@
-import TimeSchedule from './TimeSchedule';
 import buildTimerWorker from './TimerWorkerProvider';
 
 const TICK = 'tick';
@@ -11,7 +10,7 @@ const TICK_MULT = 60000 / 8;
 export default class Metronome {
   constructor(noteScheduler) {
     this.noteScheduler = noteScheduler;
-    this.nextTickSchedule = new TimeSchedule();
+    this.nextTickSchedule = 0;
     this.lookahead = LOOKAHEAD_TIME;
     this.tempo = 120.0;
     this.isRunning = false;
@@ -21,11 +20,11 @@ export default class Metronome {
   }
 
   scheduler() {
-    if (this.nextTickSchedule.timeStamp > performance.now() + SCHEDULE_AHEAD_TIME) {
+    if (this.nextTickSchedule > performance.now() + SCHEDULE_AHEAD_TIME) {
       return;
     }
-    this.noteScheduler.processTick(this.nextTickSchedule.clone());
-    this.nextTickSchedule.add(this.getTickLength());
+    this.noteScheduler.processTick(this.nextTickSchedule);
+    this.nextTickSchedule = this.nextTickSchedule + this.getTickLength();
   }
 
   start() {
@@ -35,7 +34,7 @@ export default class Metronome {
       return;
     }
     const startTime = performance.now();
-    this.nextTickSchedule.timeStamp = startTime;
+    this.nextTickSchedule = startTime;
     this.noteScheduler.start(startTime);
     this.timerWorker.postMessage('start');
     this.isRunning = true;
