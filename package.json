@@ -12,9 +12,9 @@
   "repository": "github:0la0/metronome",
   "license": "GPL-3.0",
   "devDependencies": {
-    "eslint": "^6.0.0",
-    "raw-loader": "^2.0.0",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.7"
+    "eslint": "^7.0.0-alpha.3",
+    "raw-loader": "^4.0.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
   }
 }
